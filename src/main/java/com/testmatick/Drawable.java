@@ -1,5 +1,5 @@
 package com.testmatick;
 
-public interface Draw {
+public interface Drawable {
     void draw();
 }

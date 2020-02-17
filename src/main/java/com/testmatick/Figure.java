@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-public abstract class Figure implements Draw{
+public abstract class Figure implements Drawable {
 
     private String color;
     public String name = this.getClass().getSimpleName();
