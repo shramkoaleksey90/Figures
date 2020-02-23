@@ -23,9 +23,9 @@ public class GeneratorFigures {
                     figures.add(new Quadrate(side));
                     break;
                 case 2:
-                    int largerBase =random.nextInt(10)+11;
-                    int smallerBase = random.nextInt(10)+1;
-                    int oneOfSide = random.nextInt(10)+1;
+                    int largerBase = 4;
+                    int smallerBase = 2;
+                    int oneOfSide = 3;
                     figures.add(new Trapezoid(largerBase,smallerBase,oneOfSide));
                     break;
                 default:
