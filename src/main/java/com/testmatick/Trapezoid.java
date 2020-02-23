@@ -3,7 +3,7 @@ package com.testmatick;
 public class Trapezoid extends Figure{
 
     private int largerBase, smallerBase, leftSide, rightSide;
-    private double height;
+    private double trapezoidHeight;
 
     public Trapezoid(int largerBase, int smallerBase, int leftSide) {
         if(largerBase <= smallerBase)
@@ -17,7 +17,7 @@ public class Trapezoid extends Figure{
     }
 
     private void calculateHeight() {
-        height = Math.sqrt(
+        trapezoidHeight = Math.sqrt(
                 (leftSide * leftSide) - 0.25*Math.pow((
                         ((leftSide * leftSide)-(rightSide * rightSide))/(largerBase - smallerBase)
                                 + largerBase - smallerBase),2)
@@ -26,18 +26,18 @@ public class Trapezoid extends Figure{
 
     @Override
     public double getArea() {
-        return ((largerBase + smallerBase)/2)*height;
+        return ((largerBase + smallerBase)/2)* trapezoidHeight;
     }
 
-    public double getHeight() {
-            return height;
+    public double getTrapezoidHeight() {
+            return trapezoidHeight;
     }
 
     @Override
     public String toString() {
-        return "Figure: " + name + ", " +
+        return "Figure: " + figureName + ", " +
                 "area: " + rounding(getArea())+ ", " +
-                "height: " + rounding(getHeight()) + ", " +
-                "color: " + getColor();
+                "height: " + rounding(getTrapezoidHeight()) + ", " +
+                "color: " + getFigureColor();
     }
 }

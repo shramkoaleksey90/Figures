@@ -7,8 +7,8 @@ import java.util.List;
 
 public abstract class Figure implements Drawable {
 
-    private String color;
-    public String name = this.getClass().getSimpleName();
+    public String figureName = this.getClass().getSimpleName();
+    private String figureColor;
     private final List<Colors> colorsList = new ArrayList<>(EnumSet.allOf(Colors.class));
 
     public abstract double getArea();
@@ -18,13 +18,13 @@ public abstract class Figure implements Drawable {
         System.out.println( "I draw "+ this.getClass().getSimpleName());
     }
 
-    public String getColor() {
-        return color.toLowerCase();
+    public String getFigureColor() {
+        return figureColor.toLowerCase();
     }
 
-    public void setColor(int numberOfColor) {
+    public void setFigureColor(int numberOfColor) {
         if (numberOfColor < 0 || numberOfColor > 9) throw new IndexOutOfBoundsException("I don't have this color");
-        color = String.valueOf(colorsList.get(numberOfColor));
+        figureColor = String.valueOf(colorsList.get(numberOfColor));
     }
 
     public double rounding(double value){

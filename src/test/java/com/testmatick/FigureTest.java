@@ -14,7 +14,7 @@ class FigureTest {
                 return 0;
             }
         };
-        figure.setColor(0);
-        assertEquals("red",figure.getColor());
+        figure.setFigureColor(0);
+        assertEquals("red",figure.getFigureColor());
     }
 }

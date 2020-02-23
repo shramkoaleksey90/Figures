@@ -37,7 +37,7 @@ public class GeneratorFigures {
         }
 
         for (Figure figure : figures) {
-            figure.setColor(random.nextInt(10));
+            figure.setFigureColor(random.nextInt(10));
         }
     }
 

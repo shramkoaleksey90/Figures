@@ -1,0 +1,92 @@
+@startuml
+package com.testmatick{
+
+ Figure <|-- Circle
+ Figure <|-- Quadrate
+ Figure <|-- Triangle
+ Figure <|-- Trapezoid
+ Drawable <|.. Figure
+
+ abstract class Figure{
+    + figureName : String
+    - figureColor : String
+    - colorList : ArrayList
+    --
+    + {abstract} getArea() : double
+    + draw(){I draw "..."}
+    + getFigureColor() : String
+    + setFigureColor(int numberOfColor)
+    + rounding(double value) : double
+ }
+
+ class Circle{
+    - circleRadius : int
+    - {static} PI : double
+    --
+    + Circle (int radius)
+    + getArea() : double
+    + getCircleRadius() : int
+    + setCircleRadius(int radius)
+ }
+
+ class Quadrate{
+    - quadrateSide : int
+    --
+    + Quadrate(int side)
+    + getArea() : double
+    + getQuadrateSide() : int
+    + setQuadrateSide(int side)
+ }
+
+ class Triangle{
+    - triangleBase : int
+    - triangleHeight : int
+    --
+    + Triangle(int triangleBase, int triangleHeight)
+    + getHypotenuse() : double
+    + getArea() : double
+ }
+
+ class Trapezoid{
+    - largerBase : int
+    - smallerBase : int
+    - leftSide : int
+    - rightSide : int
+    - trapezoidHeight : double
+    --
+    + Trapezoid(int largerBase, int smallerBase, int leftSide)
+    - calculateHeight()
+    + getArea() : double
+    + getTrapezoidHeight() : double
+ }
+
+ class GeneratorFigures{
+ - figures : ArrayList
+ - random : Random
+ --
+ generateListOfFigures()
+ + getFigures() : List<Figure>
+ }
+
+ class Main{
+  {static} void main()
+ }
+
+ interface Drawable{
+    draw()
+ }
+
+ enum Colors {
+     RED,
+     ORANGE,
+     YELLOW,
+     GREEN,
+     BLUE,
+     VIOLET,
+     BLACK,
+     BROWN,
+     WHITE,
+     GRAY
+ }
+}
+@enduml

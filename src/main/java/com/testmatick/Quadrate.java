@@ -2,31 +2,31 @@ package com.testmatick;
 
 public class Quadrate extends Figure{
 
-    private int side;
+    private int quadrateSide;
 
-    Quadrate(int side) {
-        if(side < 0) throw new ArithmeticException("The side of the square cannot be a negative number");
-        this.side = side;
+    public Quadrate(int quadrateSide) {
+        if(quadrateSide < 0) throw new ArithmeticException("The side of the square cannot be a negative number");
+        this.quadrateSide = quadrateSide;
     }
 
     @Override
     public double getArea() {
-        return side*side;
+        return quadrateSide * quadrateSide;
     }
 
-    public int getSide() {
-        return side;
+    public int getQuadrateSide() {
+        return quadrateSide;
     }
 
-    public void setSide(int side) {
-        Quadrate quadrate = new Quadrate(side);
+    public void setQuadrateSide(int quadrateSide) {
+        Quadrate quadrate = new Quadrate(quadrateSide);
     }
 
     @Override
     public String toString() {
-        return "Figure: " + name + ", " +
+        return "Figure: " + figureName + ", " +
                 "area: " + getArea() + ", " +
-                "side: " + getSide() + ", " +
-                "color: " + getColor();
+                "side: " + getQuadrateSide() + ", " +
+                "color: " + getFigureColor();
     }
 }

@@ -8,7 +8,7 @@ class TrapezoidTest {
     Trapezoid trapezoid = new Trapezoid(4,2,5);
     @Test
     void getHeight() {
-        assertEquals(4.898979485566356,trapezoid.getHeight());
+        assertEquals(4.898979485566356,trapezoid.getTrapezoidHeight());
     }
 
     @Test
