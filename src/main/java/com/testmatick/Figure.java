@@ -1,15 +1,14 @@
 package com.testmatick;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.EnumSet;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class Figure implements Drawable {
 
     public String figureName = this.getClass().getSimpleName();
     private String figureColor;
-    private final List<Colors> colorsList = new ArrayList<>(EnumSet.allOf(Colors.class));
+    private  List<Colors> colorsList = Arrays.asList(Colors.values());
 
     public abstract double getArea();
 
@@ -32,4 +31,18 @@ public abstract class Figure implements Drawable {
         value = bigDecimal.setScale(1,4).doubleValue();
         return value;
     }
+
+    private enum Colors {
+        RED,
+        ORANGE,
+        YELLOW,
+        GREEN,
+        BLUE,
+        VIOLET,
+        BLACK,
+        BROWN,
+        WHITE,
+        GRAY
+    }
+
 }
