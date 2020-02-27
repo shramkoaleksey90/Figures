@@ -5,6 +5,10 @@ package com.testmatick{
  Figure <|-- Quadrate
  Figure <|-- Triangle
  Figure <|-- Trapezoid
+ Figure +-- Colors
+ GeneratorFigures o-- Figure
+ Main ..> GeneratorFigures
+ Main ..> Figure
  Drawable <|.. Figure
 
  abstract class Figure{
