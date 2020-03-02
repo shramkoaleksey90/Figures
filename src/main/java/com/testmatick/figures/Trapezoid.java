@@ -1,4 +1,6 @@
-package com.testmatick;
+package com.testmatick.figures;
+
+import com.testmatick.drawing.DrawTrapezoid;
 
 public class Trapezoid extends Figure{
 
@@ -6,6 +8,7 @@ public class Trapezoid extends Figure{
     private double trapezoidHeight;
 
     public Trapezoid(int largerBase, int smallerBase, int leftSide) {
+        drawable = new DrawTrapezoid();
         if(largerBase <= smallerBase)
             throw new IllegalArgumentException(
                     "A larger base is equal to or less than a smaller base of the figure");

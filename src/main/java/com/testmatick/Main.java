@@ -1,5 +1,7 @@
 package com.testmatick;
 
+import com.testmatick.figures.Figure;
+
 import java.util.List;
 
 public class Main {
@@ -11,10 +13,7 @@ public class Main {
 
         for (Figure figure : figures) {
             System.out.println(figure);
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
+            figure.executeDrawing();
         }
     }
 }

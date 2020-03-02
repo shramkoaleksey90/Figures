@@ -1,6 +1,7 @@
 @startuml
 package com.testmatick{
 
+ Figure --> Drawable
  Figure <|-- Circle
  Figure <|-- Quadrate
  Figure <|-- Triangle
@@ -9,15 +10,23 @@ package com.testmatick{
  GeneratorFigures o-- Figure
  Main ..> GeneratorFigures
  Main ..> Figure
- Drawable <|.. Figure
+
+ package drawing{
+    Drawable <|.. DrawCircle
+    Drawable <|.. DrawQuadrate
+    Drawable <|.. DrawTrapezoid
+    Drawable <|.. DrawTrinagle
+ }
+
 
  abstract class Figure{
     + figureName : String
     - figureColor : String
     - colorList : ArrayList
+    # drawable : Drawable
     --
     + {abstract} getArea() : double
-    + draw(){I draw "..."}
+    + executeDrawing();
     + getFigureColor() : String
     + setFigureColor(int numberOfColor)
     + rounding(double value) : double

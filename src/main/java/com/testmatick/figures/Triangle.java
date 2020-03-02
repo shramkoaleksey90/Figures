@@ -1,4 +1,6 @@
-package com.testmatick;
+package com.testmatick.figures;
+
+import com.testmatick.drawing.DrawTriangle;
 
 public class Triangle extends Figure{
 
@@ -6,6 +8,7 @@ public class Triangle extends Figure{
     private int triangleHeight;
 
     public Triangle(int triangleBase, int triangleHeight) {
+        drawable = new DrawTriangle();
         if(triangleBase == 0 || triangleHeight == 0) throw new IllegalArgumentException("it is a line, not a triangle");
         this.triangleBase = triangleBase;
         this.triangleHeight = triangleHeight;

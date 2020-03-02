@@ -1,10 +1,13 @@
-package com.testmatick;
+package com.testmatick.figures;
+
+import com.testmatick.drawing.DrawQuadrate;
 
 public class Quadrate extends Figure{
 
     private int quadrateSide;
 
     public Quadrate(int quadrateSide) {
+        drawable = new DrawQuadrate();
         if(quadrateSide < 0) throw new ArithmeticException("The side of the square cannot be a negative number");
         this.quadrateSide = quadrateSide;
     }

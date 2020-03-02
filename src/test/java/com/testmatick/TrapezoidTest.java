@@ -1,5 +1,6 @@
 package com.testmatick;
 
+import com.testmatick.figures.Trapezoid;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

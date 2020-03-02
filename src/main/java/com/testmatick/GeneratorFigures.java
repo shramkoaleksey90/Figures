@@ -1,5 +1,7 @@
 package com.testmatick;
 
+import com.testmatick.figures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

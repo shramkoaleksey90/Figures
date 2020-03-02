@@ -1,4 +1,6 @@
-package com.testmatick;
+package com.testmatick.figures;
+
+import com.testmatick.drawing.DrawCircle;
 
 public class Circle extends Figure {
 
@@ -6,6 +8,7 @@ public class Circle extends Figure {
     private static final double PI = 3.14;
 
     public Circle(int circleRadius) {
+        drawable = new DrawCircle();
         if(circleRadius == 0) throw new IllegalArgumentException("it is a point, not a circle");
         this.circleRadius = circleRadius;
     }
